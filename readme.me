@@ -1,1 +1,13 @@
+Get notifications from System Center Operations Manager
 
+python (pull) - build your own docker container:
+Change SQL security authentication mode to mixed mode
+Create a new user and GRANT SELECT On AlertView TO [OperationsManager]
+Change config.ini
+docker build -t scom-bot .
+Enjoy
+
+
+Powershell (push):
+Create a new Channel (in SCOM console)
+"C:\ps\scom2telegram.ps1" -executionpolicy bypass -AlertName "*'$Data[Default='Not Present']/Context/DataItem/AlertName$'*" -AlertDescription "'$Data[Default='Not Present']/Context/DataItem/AlertDescription$'" -AlertSource "'$Data[Default='Not Present']/Context/DataItem/ManagedEntityPath$\$Data[Default='Not Present']/Context/DataItem/ManagedEntityDisplayName$'" -AlertTime "'$Data[Default='Not Present']/Context/DataItem/TimeRaisedLocal$'"
