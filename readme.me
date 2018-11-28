@@ -10,4 +10,5 @@ Enjoy
 
 Powershell (push):
 Create a new Channel (in SCOM console)
+or read this blog post - https://fixtek.blogspot.com/2017/11/telegram-system-center-operation-manager.html
 "C:\ps\scom2telegram.ps1" -executionpolicy bypass -AlertName "*'$Data[Default='Not Present']/Context/DataItem/AlertName$'*" -AlertDescription "'$Data[Default='Not Present']/Context/DataItem/AlertDescription$'" -AlertSource "'$Data[Default='Not Present']/Context/DataItem/ManagedEntityPath$\$Data[Default='Not Present']/Context/DataItem/ManagedEntityDisplayName$'" -AlertTime "'$Data[Default='Not Present']/Context/DataItem/TimeRaisedLocal$'"
